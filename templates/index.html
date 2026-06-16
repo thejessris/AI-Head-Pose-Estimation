@@ -12,21 +12,91 @@ filename='css/style.css') }}">
 
 <body>
 
-<div class="container">
+<header>
 
-<h1>AI Head Pose Estimation Dashboard</h1>
+    <h1>
+        AI Head Pose Estimation Dashboard
+    </h1>
 
-<img src="{{ url_for('video_feed') }}">
+    <p>
+        Real-Time Head Orientation &
+        Attention Monitoring
+    </p>
 
-<div class="info">
+</header>
 
-<p>Yaw → Left / Right</p>
-<p>Pitch → Up / Down</p>
-<p>Roll → Tilt</p>
+<div class="dashboard">
+
+    <div class="video-section">
+
+        <img
+        src="{{ url_for('video_feed') }}"
+        alt="Live Feed">
+
+    </div>
+
+    <div class="metrics">
+
+        <div class="card">
+            <h2>Yaw</h2>
+            <div id="yaw"
+                 class="metric-value green">
+                 0°
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Pitch</h2>
+            <div id="pitch"
+                 class="metric-value yellow">
+                 0°
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Roll</h2>
+            <div id="roll"
+                 class="metric-value red">
+                 0°
+            </div>
+        </div>
+
+        <div class="card">
+
+            <h2>Attention Score</h2>
+
+            <div id="attention"
+                 class="metric-value green">
+                 95%
+            </div>
+
+            <div class="progress">
+                <div id="progress-bar"
+                     class="progress-bar">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Status</h2>
+
+            <div id="status"
+                 class="status">
+                 Attentive
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
-</div>
+<script src="{{ url_for(
+'static',
+filename='js/app.js'
+) }}"></script>
 
 </body>
 </html>
