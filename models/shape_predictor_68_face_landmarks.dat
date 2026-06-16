@@ -1,0 +1,5 @@
+It is a pretrained facial landmark model used by Dlib.
+
+Download from:
+
+https://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
