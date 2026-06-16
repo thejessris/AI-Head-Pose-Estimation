@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Head Pose Estimation</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Head Pose Estimation Dashboard</h1>
+
+<img src="{{ url_for('video_feed') }}">
+
+<div class="info">
+
+<p>Yaw → Left / Right</p>
+<p>Pitch → Up / Down</p>
+<p>Roll → Tilt</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
